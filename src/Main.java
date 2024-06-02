@@ -9,7 +9,7 @@ public class Main {
         }
         System.out.println("Задание 2");
         int temperatura = 5;
-        if (temperatura >=5){
+        if (temperatura >5){
             System.out.println("На улице " + temperatura + " градусов, можно идти без шапки");
         }else{
             System.out.println("На улице " + temperatura + " градусов, нужно надеть шапку");
@@ -34,9 +34,9 @@ public class Main {
         }
         System.out.println("Задание 5");
         int childAge = 8;
-        if (childAge<=5){
+        if (childAge<5){
             System.out.println("Eсли возраст равен " + childAge + " то ему нельзя кататься на аттракционе");
-        }else if (childAge>5 && childAge<=14){
+        }else if (childAge>=5 && childAge<=14){
             System.out.println("Eсли возраст равен " + childAge + " то ему можно кататься на аттракционе в сопровождении взрослого");
         }else if ( childAge>14){
             System.out.println("Eсли возраст равен " + childAge + " то ему можно кататься на аттракционе без сопровождения взрослого");
@@ -54,12 +54,16 @@ public class Main {
         int one = 6;
         int two = 4;
         int three = 5;
-        if ((one<two && two<three) || (two<one && one<three)){
+        if (one>two){
+            if (one > three){
+                System.out.println("Самое большое число "+one);
+            }else {
+                System.out.println("Самое большое число "+three);
+            }
+        }else if (two>three){
+            System.out.println("Самое большое число "+ two);
+        }else {
             System.out.println("Самое большое число " + three);
-        }else if ((one>two && two>three) || (two<three && one>three)){
-            System.out.println("Самое большое число " + one);
-        }else if ((one<two && one>three) || (two>three && one<three)){
-            System.out.println("Самое большое число " + two);
         }
     }
 }
